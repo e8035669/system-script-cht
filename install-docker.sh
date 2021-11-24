@@ -16,7 +16,7 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
-echo << EOF | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf
+cat << EOF | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service]
 Environment="HTTP_PROXY=${http_proxy}"
 Environment="HTTPS_PROXY=${http_proxy}"
