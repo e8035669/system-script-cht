@@ -37,6 +37,13 @@ fi
 read -r -p "Change apt repository from ubuntu to cht mirror (y/n)" reply
 if [ $reply == 'y' ]; then
     sudo sed -i 's/http:\/\/archive.ubuntu.com\/ubuntu/http:\/\/mirror01.idc.hinet.net\/ubuntu/g' /etc/apt/sources.list
+    sudo sed -i 's/https:\/\/archive.ubuntu.com\/ubuntu/https:\/\/mirror01.idc.hinet.net\/ubuntu/g' /etc/apt/sources.list
+fi
+
+read -r -p "Change apt repository from cht to ubuntu mirror (y/n)" reply
+if [ $reply == 'y' ]; then
+    sudo sed -i 's/http:\/\/mirror01.idc.hinet.net\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
+    sudo sed -i 's/https:\/\/mirror01.idc.hinet.net\/ubuntu/https:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 fi
 
 read -r -p "Add apt proxy (y/n)" reply
