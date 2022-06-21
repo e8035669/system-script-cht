@@ -15,7 +15,7 @@ let g:ycm_semantic_triggers =  {
 let g:NERDTreeWinPos = "left"
 set nofoldenable
 
-map <C-Q> <C-W>
+nnoremap <C-e> <C-w>
 command WWW w !sudo tee % > /dev/null
 command! W w
 set nu
